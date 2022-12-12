@@ -19,7 +19,7 @@ class HashTable {
         const address = this._hashKey(key);
         const value = this.data[address];
 
-        if(!value || value === 0)
+        if(!value || value === undefined)
             return undefined;
         
         if(value.length > 1) { //INFO : If collision then Big O -> O(n)
@@ -32,7 +32,7 @@ class HashTable {
     }
 
     /* Simulating a hash function that returns a hash value based on the inuput string
-    Note : The naming convention followed in java community starting with "_" (underscore), 
+    Note : The naming convention followed in javascript community starting with "_" (underscore), 
     represent that this is a private function that shouldn't be accessed outside the class. 
     */
     _hashKey(key){
