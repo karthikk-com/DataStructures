@@ -3,7 +3,9 @@ class HashTable {
         this.data = new Array(size);
     }
 
-    /* Method to store key - value pair*/
+    /*  Method to store key - value pair
+        Big O -> O(1)
+    */
     set(key,value) {
         const address = this._hashKey(key);
         
