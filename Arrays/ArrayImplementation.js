@@ -26,9 +26,11 @@ class Array{
         Method will remove a element at the end of the array
    */
     pop() {
-        delete this.data[this.length-1];
-        this.length--;
-        return this;
+        if(this.length > 0) {
+            delete this.data[this.length-1];
+            this.length--;
+          }
+          return this.data;
     }
 
     /*  delete(index) --> O(n) Linear Time
